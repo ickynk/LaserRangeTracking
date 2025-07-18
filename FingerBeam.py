@@ -17,8 +17,10 @@ corners         = []
 # --- Mouse / Corner callbacks ----------------------------------------------
 
 def click_corner(event, x, y, flags, frame):
+    global ps
     if event == cv2.EVENT_LBUTTONUP:
         corners.append([x, y])
+        ps.set_corners(corners)
         print(corners)
 
 def safe_destroy(win_name):
@@ -255,8 +257,10 @@ corners         = []
 # --- Mouse / Corner callbacks ----------------------------------------------
 
 def click_corner(event, x, y, flags, frame):
+    global ps
     if event == cv2.EVENT_LBUTTONUP:
         corners.append([x, y])
+        ps.set_corners(corners)
         print(corners)
 
 
